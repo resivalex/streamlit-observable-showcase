@@ -1,5 +1,10 @@
 mkdir -p ./.streamlit/
 
+if [ -z "$PORT" ]
+then
+  PORT=8501
+fi
+
 echo "\
 [general]\n\
 email = \"alexsebastian.garcia@gmail.com\"\n\
