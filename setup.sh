@@ -13,6 +13,9 @@ email = \"alexsebastian.garcia@gmail.com\"\n\
 echo "\
 [server]\n\
 headless = true\n\
-enableCORS=false\n\
+enableCORS = false\n\
 port = $PORT\n\
+\n\
+[browser]
+gatherUsageStats = false\n\
 " > ./.streamlit/config.toml
