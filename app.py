@@ -108,7 +108,7 @@ elif section == Section.BAR_CHART.value:
 Let's start with a humble bar chart!
 
 Let's define 3 different number sliders with 
-[`st.slider`](https://docs.streamlit.io/en/stable/api.html#streamlit.slider), 
+[`st.slider`](https://docs.streamlit.io/library/api-reference/widgets/st.slider), 
 one for each person: Alex, Brian, and Craig. These sliders are normal Streamlit  widgets, 
 defined in Python. With these 3 values, we can make a bar chart, with 1 bar per person. 
 We could use the standard [D3 Bar Chart](https://observablehq.com/@d3/bar-chart) 
@@ -239,13 +239,13 @@ Just like with penguin scatterplot matrix, we need to
 for three reasons:
 
 1. We want to choose the color of the spikes based off of 
-[`st.color_picker`](https://docs.streamlit.io/en/stable/api.html#streamlit.beta_color_picker), 
+[`st.color_picker`](https://docs.streamlit.io/library/api-reference/widgets/st.color_picker), 
 but the color of the spikes weren't exposed in a separate cell in the original notebook. 
 2. We want to pass in a JSON serializable list into the notebook, and re-use the data processing 
 logic found in the original `"data"` cell.
 
 Let's take a look at what the data looks like, and make a 
-[`st.slider`](https://docs.streamlit.io/en/stable/api.html#streamlit.slider) 
+[`st.slider`](https://docs.streamlit.io/library/api-reference/widgets/st.slider) 
 widget to select a specific month in 2010 to look at:
 """)
 
@@ -280,7 +280,7 @@ the underlying notebook is expecting).
 """)
 
     with st.echo():
-        color = st.beta_color_picker("Spike Color", "#ff0000")
+        color = st.color_picker("Spike Color", "#ff0000")
     
         observable("Spike Chart of Births by County", 
             notebook="d/1f434ef3b0569a00", 
